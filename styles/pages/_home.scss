@@ -1,0 +1,87 @@
+body{
+    overflow: hidden;  
+}
+.leftPart{
+    background-color: rgb(75, 1, 75);
+    width: 250px;
+    height: 100vh;
+    text-align: center;
+    img{
+        margin-top: 50px;
+    }
+    .iconDarkMode{
+        position: absolute;
+        bottom: 50px;
+        left: 100px;
+        rotate: 90deg; 
+    }
+}
+.imageRandom{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    img{
+        display: block;
+        width: 720px;
+    }
+}
+.matchWrapper{
+    width: 500px;
+    position: absolute;
+    top: 250px;
+    left: 400px;
+    .matchModel{
+        display: flex;
+        justify-content: end;
+        div{
+            margin: 0 20px;
+        }
+    }
+    .match{
+        display: flex;
+        justify-content: space-between;
+        margin: 20px 0;
+        button{
+            margin: 0 5px;
+            cursor: pointer;
+            border-radius: 5px;
+            border: 1px solid #000;
+        }
+    }
+
+}
+.yourBets{
+    position: absolute;
+    bottom: 0;
+    right: 50px;
+    width: 350px;
+    transition: 0.5s ease-in-out;
+    .yourBetsTitle{
+        background-color: purple;
+        padding: 10px;
+        text-align: center;
+        color: #fff;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+    .yourBetsAdd{
+        background-color: #fff;
+        height: 400px;
+    }
+    .gainBox{
+        background-color: rgb(216, 213, 213);
+        height: 200px;
+    }
+}
+.active{
+    transform: translateY(95%);
+}
+.noactive{
+    transform: translateY(0);
+}
+.activeButton{
+    background-color: rgb(247, 188, 247);
+    border: 1px solid purple;
+    
+    
+}

@@ -1,0 +1,27 @@
+.principalnav{
+    background-color: rgb(250, 238, 250);
+    position: absolute;
+    top: 0;
+    left: 250px;
+    width: 100%;
+    padding: 40px 0 25px 25px;
+    a{
+        text-decoration: none;
+        color: rgb(136, 91, 136);
+        margin: 0 15px;
+        &:hover{
+            color: purple;
+        }
+    }
+}
+.undernav{
+    position: absolute;
+    top: 83.39px;
+    left: 250px;
+    a{
+        text-decoration: none;
+        // &:first-child{
+    
+        // }
+    }
+}
