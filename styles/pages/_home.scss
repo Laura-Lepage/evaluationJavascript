@@ -1,6 +1,9 @@
 body{
     overflow: hidden;  
 }
+button{
+    cursor: pointer;
+}
 .leftPart{
     background-color: rgb(75, 1, 75);
     width: 250px;
@@ -43,7 +46,6 @@ body{
         margin: 20px 0;
         button{
             margin: 0 5px;
-            cursor: pointer;
             border-radius: 5px;
             border: 1px solid #000;
         }
@@ -55,6 +57,7 @@ body{
     bottom: 0;
     right: 50px;
     width: 350px;
+    transform: translateY(95%);
     transition: 0.5s ease-in-out;
     .yourBetsTitle{
         background-color: purple;
@@ -74,9 +77,6 @@ body{
     }
 }
 .active{
-    transform: translateY(95%);
-}
-.noactive{
     transform: translateY(0);
 }
 .activeButton{
@@ -84,4 +84,18 @@ body{
     border: 1px solid purple;
     
     
+}
+.yourBetsAddDiv{
+
+    padding: 25px;
+    .matchDiv{
+        display: flex;
+        justify-content: space-between;
+        
+    }
+    .cross{
+        margin-left: 20px;
+        border: none;
+        background-color: transparent;
+    }
 }
