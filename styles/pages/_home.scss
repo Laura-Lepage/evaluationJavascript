@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 body{
     overflow: hidden;  
+    font-family: "Open Sans", sans-serif;
 }
 button{
     cursor: pointer;
@@ -33,13 +36,14 @@ button{
 .matchWrapper{
     width: 500px;
     position: absolute;
-    top: 250px;
+    top: 200px;
     left: 400px;
+    width: 550px;
     .matchModel{
         display: flex;
         justify-content: end;
         div{
-            margin: 0 20px;
+            margin: 0 33px;
         }
     }
     .match{
@@ -54,6 +58,7 @@ button{
         }
         button{
             margin: 0 5px;
+            padding: 5px 15px;
             border-radius: 5px;
             border: 1px solid #000;
         }
@@ -63,9 +68,9 @@ button{
 .yourBets{
     position: absolute;
     bottom: 0;
-    right: 50px;
-    width: 350px;
-    transform: translateY(95%);
+    right: 75px;
+    width: 400px;
+    transform: translateY(93%);
     transition: 0.5s ease-in-out;
     .yourBetsTitle{
         background-color: purple;
@@ -77,11 +82,24 @@ button{
     }
     .yourBetsAdd{
         background-color: #fff;
-        height: 400px;
+        height: 300px;
+        max-height: 300px;
+        overflow-y: auto;
     }
     .gainBox{
         background-color: rgb(216, 213, 213);
-        height: 200px;
+        height: 150px;
+        position: relative;
+        .gainBoxDiv{
+            @include absmiddle;
+            div{
+                margin-bottom: 10px;
+            }
+            #mise{
+                width: 50px;
+            }
+
+        }
     }
 }
 .active{
