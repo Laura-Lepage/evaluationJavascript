@@ -1,3 +1,5 @@
+//Hello Olivier (haha je suis sûr que tu ne t'attendais pas à un petit message d'accueil), juste pour te dire que l'incrémentation de mon panier part en cacahuètes quand sur la même ligne je passe d'un bouton à l'autre et aussi l'équipe choisie se modifie en fonction du dernier bouton cliqué... je pète un mini câble... haha... si jamais tu peux m'expliquer c'est quoi le problème à la correction... Je te remercie 😁
+
 // == Variables ==
 // ===============
 
@@ -29,7 +31,6 @@ function updateCoteTotale(){
   // Retourne le total calculé avec 2 décimales
   return total.toFixed(2)
 }
-
 
 // Fonction qui vérifie l'état du compteur du "panier" et ajoute/supprime la class active qui permet de faire monter/descendre le panier
 function emptyBets(div){
@@ -70,6 +71,7 @@ fetch(`scripts/datas.json`)
     console.log("Erreur lors de la récupération des données :", error)
   })
 
+
 // == Code ==
 // ==========
 
@@ -95,16 +97,14 @@ matchWrapper.addEventListener('click', function(e) {
     const isActive = clickedButton.classList.contains("activeButton")
     // Si le bouton est déjà actif, décrémente le compteur, sinon, incrémente le compteur
     count += isActive ? -1 : 1;
-  
     // Met à jour le titre "Your Bets" avec le compteur
     yourBetsTitle.innerHTML = `Your Bets (${count})`
     // Ajoute ou retire la classe "activeButton" du bouton cliqué
     clickedButton.classList.toggle("activeButton")
-    
     // Vide la div yourBetsAdd avant d'ajouter de nouveaux éléments
     yourBetsAdd.innerHTML = ''
     // Parcours tous les boutons avec la classe activeButton
-    document.querySelectorAll('.btn.activeButton').forEach(button => {
+    document.querySelectorAll('.btn.activeButton').forEach(button =>{
       // Récupère la valeur du bouton
       const betValue = button.textContent
       // Ajout de betValue au tableau betValueTable
@@ -156,6 +156,7 @@ matchWrapper.addEventListener('click', function(e) {
   }
 
 })
+
 //Ajout d'un évenement quand on opère un changement sur input number
 inputNumber.addEventListener('change', function(){
   let inputNumberValue = inputNumber.value
@@ -169,7 +170,7 @@ inputNumber.addEventListener('change', function(){
 // Ajout d'un écouteur d'événements aux boutons "cross"
 yourBetsAdd.addEventListener('click', function(e) {
   // Vérifie si l'élément cliqué est un bouton avec la classe "cross"
-  if (e.target.classList.contains("cross")) {
+  if (e.target.classList.contains("cross")){
     // Récupère le parent de l'élément cliqué (la div yourBetsAddDiv)
     const parentDiv = e.target.closest('.yourBetsAddDiv')
     // Si le parent est trouvé, supprime-le
@@ -187,7 +188,7 @@ yourBetsAdd.addEventListener('click', function(e) {
       //mettre à jour les valeurs de data-index
       //on récupère toutes les div
         const listItems = yourBetsAdd.querySelectorAll(".yourBetsAddDiv");
-        listItems.forEach(function(item, i) {
+        listItems.forEach(function(item, i){
             item.setAttribute("data-index", i)
         })
 
@@ -207,33 +208,19 @@ yourBetsAdd.addEventListener('click', function(e) {
         // Récupérer l'attribut data-id de ce match
         const matchId = match.getAttribute('data-id')
         // Si l'attribut data-id du match correspond à celui de la div supprimée
-        if (matchId === removedMatchId) {
+        if (matchId === removedMatchId){
             // Désactiver tous les boutons dans ce match
-            match.querySelectorAll('.btn.activeButton').forEach(button => {
+            match.querySelectorAll('.btn.activeButton').forEach(button =>{
                 button.classList.remove("activeButton")
             })
         }
       })
-      
-  
     }
     
   }
   //vérification état du "panier"
   emptyBets(yourBets)
 })
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // == Gestion du fond d'image aléatoire ==
@@ -247,7 +234,6 @@ const randomImage = imagesTable[Math.floor(Math.random() * imagesTable.length)]
 
 // Injection de l'image aléatoire dans sa div "imageRandom"
 imageRandom.innerHTML = `<img src="images/${randomImage}" alt="">`
-
 
 
 // == Dark Mode ==
