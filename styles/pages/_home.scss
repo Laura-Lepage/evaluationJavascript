@@ -15,8 +15,10 @@ button{
     .iconDarkMode{
         position: absolute;
         bottom: 50px;
-        left: 100px;
-        rotate: 90deg; 
+        left: 100px; 
+        .fa-moon, .fa-sun{
+            color: #fff;
+        }
     }
 }
 .imageRandom{
@@ -43,7 +45,13 @@ button{
     .match{
         display: flex;
         justify-content: space-between;
-        margin: 20px 0;
+        margin: 10px 0;
+        padding: 10px;
+        &:hover{
+            background-color: rgba(128, 0, 128, 0.1);
+            cursor: pointer;
+        
+        }
         button{
             margin: 0 5px;
             border-radius: 5px;
